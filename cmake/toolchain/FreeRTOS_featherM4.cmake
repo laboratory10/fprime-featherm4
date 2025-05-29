@@ -1,13 +1,13 @@
 ####
-# featherM4.cmake:
+# FreeRTOS_featherM4.cmake:
 #
 # Adafruit Feather M4 Express support.
 ####
 set(CMAKE_SYSTEM_NAME "Generic")
 set(CMAKE_SYSTEM_PROCESSOR "arm")
 set(CMAKE_CROSSCOMPILING 1)
-set(FPRIME_PLATFORM "ArduinoFw")
-set(FPRIME_USE_BAREMETAL_SCHEDULER ON)
+set(FPRIME_PLATFORM "FreeRTOS_ArduinoFw")
+set(FPRIME_USE_BAREMETAL_SCHEDULER OFF)
 set(ARDUINO_BUILD_PROPERTIES)
 
 set(ARDUINO_FQBN "adafruit:samd:adafruit_feather_m4")
