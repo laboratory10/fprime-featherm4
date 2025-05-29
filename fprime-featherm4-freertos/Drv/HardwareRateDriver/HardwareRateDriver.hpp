@@ -1,7 +1,7 @@
 #ifndef ARDUINO_DRV_HARDWARERATEDRIVER_HPP
 #define ARDUINO_DRV_HARDWARERATEDRIVER_HPP
 #include <Os/RawTime.hpp>
-#include <Arduino/Drv/HardwareRateDriver/HardwareRateDriverComponentAc.hpp>
+#include <fprime-featherm4-freertos/Drv/HardwareRateDriver/HardwareRateDriverComponentAc.hpp>
 
 namespace Arduino {
     /**

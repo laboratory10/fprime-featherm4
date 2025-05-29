@@ -2,7 +2,7 @@
 // \title Os/Console.cpp
 // \brief stub implementation for Os::Console
 // ======================================================================
-#include <Arduino/Os/Console.hpp>
+#include <fprime-featherm4-freertos/Os/Console.hpp>
 
 namespace Os {
 namespace Arduino {

@@ -2,7 +2,7 @@
 // \title Os/DefaultRawTime.cpp
 // \brief sets default Os::RawTime to no-op stub implementation via linker
 // ======================================================================
-#include "Arduino/Os//RawTime.hpp"
+#include "fprime-featherm4-freertos/Os/RawTime.hpp"
 #include "Os/Delegate.hpp"
 
 namespace Os {

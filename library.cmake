@@ -10,3 +10,4 @@ add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/fprime-featherm4-freertos/Drv
 add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/fprime-featherm4-freertos/Drv/StreamDriver")
 add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/fprime-featherm4-freertos/Os")
 add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/fprime-featherm4-freertos/Svc/ArduinoTime")
+add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/fprime-featherm4-freertos/Svc/Ports")

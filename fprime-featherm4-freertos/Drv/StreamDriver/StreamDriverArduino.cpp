@@ -4,7 +4,7 @@
 // \brief  cpp file for StreamDriver component implementation class
 // ======================================================================
 
-#include <Arduino/Drv/StreamDriver/StreamDriver.hpp>
+#include <fprime-featherm4-freertos/Drv/StreamDriver/StreamDriver.hpp>
 #include <FprimeArduino.hpp>
 #include "Fw/Types/BasicTypes.hpp"
 #include "Fw/Types/Assert.hpp"

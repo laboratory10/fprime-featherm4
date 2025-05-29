@@ -1,5 +1,5 @@
 #include <FpConfig.hpp>
-#include <Arduino/Drv/HardwareRateDriver/HardwareRateDriver.hpp>
+#include <fprime-featherm4-freertos/Drv/HardwareRateDriver/HardwareRateDriver.hpp>
 #include <Fw/Logger/Logger.hpp>
 #include <FprimeArduino.hpp>
 

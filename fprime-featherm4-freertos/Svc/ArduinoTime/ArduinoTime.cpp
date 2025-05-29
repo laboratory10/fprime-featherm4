@@ -8,7 +8,7 @@
  *
  * @author lestarch
  */
-#include <Arduino/Svc/ArduinoTime/ArduinoTime.hpp>
+#include <fprime-featherm4-freertos/Svc/ArduinoTime/ArduinoTime.hpp>
 #include <TimeLib.h>
 #include <FprimeArduino.hpp>
 

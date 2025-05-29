@@ -3,7 +3,7 @@
 // \brief sets default Os::Console to arduino implementation via linker
 // ======================================================================
 #include "Os/Console.hpp"
-#include "Arduino/Os/Console.hpp"
+#include "fprime-featherm4-freertos/Os/Console.hpp"
 #include "Os/Delegate.hpp"
 
 namespace Os {
