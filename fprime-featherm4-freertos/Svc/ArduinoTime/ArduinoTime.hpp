@@ -1,7 +1,7 @@
 #ifndef ARDUINOTIMEIMPL_HPP_
 #define ARDUINOTIMEIMPL_HPP_
 
-#include <Arduino/Svc/ArduinoTime/ArduinoTimeComponentAc.hpp>
+#include <fprime-featherm4-freertos/Svc/ArduinoTime/ArduinoTimeComponentAc.hpp>
 
 namespace Arduino {
 

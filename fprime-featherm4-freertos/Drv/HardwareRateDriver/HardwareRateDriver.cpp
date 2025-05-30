@@ -1,4 +1,4 @@
-#include <Arduino/Drv/HardwareRateDriver/HardwareRateDriver.hpp>
+#include <fprime-featherm4-freertos/Drv/HardwareRateDriver/HardwareRateDriver.hpp>
 #include <FpConfig.hpp>
 #ifdef ARDUINO
 #include <FprimeArduino.hpp>  // Needed for call to sei()

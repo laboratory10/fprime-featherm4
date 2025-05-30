@@ -7,7 +7,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <unistd.h>
-#include <fprime-arduino/ArduinoDrv/StreamDriver/StreamDriver.hpp>
+#include <fprime-featherm4-freertos/Drv/StreamDriver/StreamDriver.hpp>
 #include "Fw/Types/BasicTypes.hpp"
 
 #define SERIAL_FILE_LINUX_TMPL "/dev/pts/%d"
