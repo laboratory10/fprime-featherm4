@@ -1,12 +1,12 @@
-/*
- * FeatherM4Time.cpp:
- *
- * An implementation of FeatherM4Time used on Arduino so that standard system components can be run as
- * expected. The time format is (U32 seconds, U32 microseconds) and must be mapped to the Arduino
- * supplied "millis()" and "micros()" functions. Thus, the limitation is that this time will roll
- * over after 49 days of continuous use.
- *
- */
+// ======================================================================
+// \title FeatherM4Time.cpp
+// \brief FeatherM4 implementation for FeatherM4Time. Heavily based on 
+//        the fprime-arduino library. The time format is 
+//        (U32 seconds, U32 microseconds) and must be mapped to the 
+//        Arduino supplied "millis()" and "micros()" functions. Heavily 
+//        based on the fprime-arduino library.
+// ======================================================================
+
 #include <fprime-featherm4-freertos/Svc/FeatherM4Time/FeatherM4Time.hpp>
 #include <TimeLib.h>
 #include <FprimeFeatherM4.hpp>

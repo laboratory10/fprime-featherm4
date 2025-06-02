@@ -27,7 +27,7 @@ choose_fprime_implementation(Os/Mutex Os_Mutex_FreeRTOS)
 choose_fprime_implementation(Os/ConditionVariable Os_ConditionVariable_FreeRTOS)
 
 
-# Add Arduino OSAL Implementations
+# Add FeatherM4 OSAL Implementations
 choose_fprime_implementation(Os/Console Os_Console_FeatherM4)
 choose_fprime_implementation(Os/RawTime Os_RawTime_FeatherM4)
 

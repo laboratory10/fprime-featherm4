@@ -18,7 +18,7 @@ struct StreamConsoleHandle : public ConsoleHandle {
     void setStreamHandler(Stream& stream);
 };
 
-//! \brief implementation of Os::Console that routes to an Arduino stream
+//! \brief implementation of Os::Console that routes to an FeatherM4 stream
 //!
 class StreamConsole : public ConsoleInterface {
   public:

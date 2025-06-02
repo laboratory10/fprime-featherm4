@@ -13,13 +13,13 @@
 
 namespace FeatherM4 {
 // Allow for setting serial ports on linux from the inputs
-#ifndef ARDUINO
-extern char** SERIAL_PORT;
-#endif
+//#ifndef ARDUINO
+//extern char** SERIAL_PORT;
+//#endif
 
 class StreamDriver : public StreamDriverComponentBase {
   public:
-    const static FwSizeType SERIAL_BUFFER_SIZE = 64;  // Maximum Arduino buffer size
+    const static FwSizeType SERIAL_BUFFER_SIZE = 64;  // Maximum M4 buffer size
     // ----------------------------------------------------------------------
     // Construction, initialization, and destruction
     // ----------------------------------------------------------------------

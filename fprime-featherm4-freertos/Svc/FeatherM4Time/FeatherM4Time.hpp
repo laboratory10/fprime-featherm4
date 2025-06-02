@@ -1,6 +1,6 @@
 // ======================================================================
-// \title RawTime.hpp
-// \brief FeatherM4 definitions for Os::RawTime. Heavily based on 
+// \title FeatherM4Time.hpp
+// \brief FeatherM4 definitions for FeatherM4Time. Heavily based on 
 //        the fprime-arduino library.
 // ======================================================================
 #ifndef FEATHERM4_SVC_FEATHERM4TIME_HPP
@@ -15,7 +15,7 @@ class FeatherM4Time : public FeatherM4TimeComponentBase {
     FeatherM4Time(const char* compName);
     virtual ~FeatherM4Time();
 
-    //! \brief set time for the arduino subsystem
+    //! \brief set time
     //!
     void setTime(
         U32 year,             //!< The current year

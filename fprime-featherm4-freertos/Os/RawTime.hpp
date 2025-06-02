@@ -1,6 +1,7 @@
 // ======================================================================
-// \title Os/RawTime.hpp
-// \brief Arduino definitions for Os::RawTime
+// \title RawTime.hpp
+// \brief FeatherM4 definitions for Os::RawTime. Heavily based on 
+//        the fprime-arduino library.
 // ======================================================================
 #ifndef FEATHERM4_OS_RAWTIME_HPP
 #define FEATHERM4_OS_RAWTIME_HPP
