@@ -1,4 +1,4 @@
-module Arduino {
+module FeatherM4 {
     @ Port allowing a component to set the time
     port SetTime(
         year:  U32, @< The current year

@@ -1,11 +1,12 @@
 // ======================================================================
-// \title Os/Console.cpp
-// \brief stub implementation for Os::Console
+// \title Console.cpp
+// \brief FeatherM4 implementation for Os::Console. Heavily based on 
+//        the fprime-arduino library.
 // ======================================================================
 #include <fprime-featherm4-freertos/Os/Console.hpp>
 
 namespace Os {
-namespace Arduino {
+namespace FeatherM4 {
 
 void StreamConsoleHandle::setStreamHandler(Stream& stream) {
     this->m_stream = &stream;
@@ -24,5 +25,5 @@ ConsoleHandle* StreamConsole::getHandle() {
 }
 
 
-} // namespace Stub
+} // namespace FeatherM4
 } // namespace Os

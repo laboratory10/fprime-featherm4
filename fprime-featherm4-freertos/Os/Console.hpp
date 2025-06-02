@@ -1,13 +1,14 @@
 // ======================================================================
-// \title Os/Console.hpp
-// \brief arduino stream implementation for Os::Console, header and test definitions
+// \title Console.hpp
+// \brief FeatherM4 definitions for Os::Console. Heavily based on 
+//        the fprime-arduino library.
 // ======================================================================
-#ifndef OS_Stub_Console_HPP
-#define OS_Stub_Console_HPP
+#ifndef FEATHERM4_OS_CONSOLE_HPP
+#define FEATHERM4_OS_CONSOLE_HPP
 #include <Os/Console.hpp>
-#include <FprimeArduino.hpp>
+#include <FprimeFeatherM4.hpp>
 namespace Os {
-namespace Arduino {
+namespace FeatherM4 {
 
 //! ConsoleHandle class definition for stub implementations.
 //!
@@ -60,7 +61,7 @@ class StreamConsole : public ConsoleInterface {
     //! File handle for PosixFile
     StreamConsoleHandle m_handle;
 };
-} // namespace Arduino
+} // namespace FeatherM4
 } // namespace Os
 
-#endif // OS_Stub_Console_HPP
+#endif // FEATHERM4_OS_CONSOLE_HPP

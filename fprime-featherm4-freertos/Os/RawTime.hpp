@@ -2,15 +2,15 @@
 // \title Os/RawTime.hpp
 // \brief Arduino definitions for Os::RawTime
 // ======================================================================
-#ifndef OS_STUB_RAWTIME_HPP
-#define OS_STUB_RAWTIME_HPP
+#ifndef FEATHERM4_OS_RAWTIME_HPP
+#define FEATHERM4_OS_RAWTIME_HPP
 
 #include "Os/RawTime.hpp"
 
 namespace Os {
-namespace Arduino {
+namespace FeatherM4 {
 
-struct ArduinoRawTimeHandle : public RawTimeHandle {
+struct FeatherM4RawTimeHandle : public RawTimeHandle {
     U32 m_seconds;
     U32 m_micros;
 };
@@ -19,15 +19,15 @@ struct ArduinoRawTimeHandle : public RawTimeHandle {
 //!
 //! Stub implementation of `RawTimeInterface`.
 //!
-class ArduinoRawTime : public RawTimeInterface {
+class FeatherM4RawTime : public RawTimeInterface {
   public:
     //! \brief constructor
     //!
-    ArduinoRawTime() = default;
+    FeatherM4RawTime() = default;
 
     //! \brief destructor
     //!
-    ~ArduinoRawTime() override = default;
+    ~FeatherM4RawTime() override = default;
 
     //! \brief return the underlying RawTime handle (implementation specific)
     //! \return internal RawTime handle representation
@@ -84,9 +84,9 @@ class ArduinoRawTime : public RawTimeInterface {
 
   private:
     //! Handle for StubRawTime
-    ArduinoRawTimeHandle m_handle;
+    FeatherM4RawTimeHandle m_handle;
 };
 
-} // namespace Arduino
+} // namespace FeatherM4
 } // namespace Os
-#endif // OS_STUB_RAWTIME_HPP
+#endif // FEATHERM4_OS_RAWTIME_HPP

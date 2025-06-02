@@ -1,26 +1,25 @@
 /*
- * ArduinoTime.cpp:
+ * FeatherM4Time.cpp:
  *
- * An implementation of ArduinoTime used on Arduino so that standard system components can be run as
+ * An implementation of FeatherM4Time used on Arduino so that standard system components can be run as
  * expected. The time format is (U32 seconds, U32 microseconds) and must be mapped to the Arduino
  * supplied "millis()" and "micros()" functions. Thus, the limitation is that this time will roll
  * over after 49 days of continuous use.
  *
- * @author lestarch
  */
-#include <fprime-featherm4-freertos/Svc/ArduinoTime/ArduinoTime.hpp>
+#include <fprime-featherm4-freertos/Svc/FeatherM4Time/FeatherM4Time.hpp>
 #include <TimeLib.h>
-#include <FprimeArduino.hpp>
+#include <FprimeFeatherM4.hpp>
 
-namespace Arduino {
+namespace FeatherM4 {
 
 constexpr FwSizeType TIME_ROLLOVER_RETRIES = 3;
 constexpr  U32 MICROSECONDS_PER_SECOND = 1000000;
 
-ArduinoTime::ArduinoTime(const char* name) : ArduinoTimeComponentBase(name) {}
-ArduinoTime::~ArduinoTime() {}
+FeatherM4Time::FeatherM4Time(const char* name) : FeatherM4TimeComponentBase(name) {}
+FeatherM4Time::~FeatherM4Time() {}
 
-void ArduinoTime::getTime_handler(NATIVE_INT_TYPE portNum, /*!< The port number*/
+void FeatherM4Time::getTime_handler(NATIVE_INT_TYPE portNum, /*!< The port number*/
                                       Fw::Time& time           /*!< The time to set */
 ) {
     time_t time_seconds = 0;
@@ -40,7 +39,7 @@ void ArduinoTime::getTime_handler(NATIVE_INT_TYPE portNum, /*!< The port number*
     time.set(base, static_cast<U32>(time_seconds), time_microseconds);
 }
 
-void ArduinoTime ::setTime(U32 year, U8 month, U8 day, U8 hour, U8 minute, U8 second) {
+void FeatherM4Time ::setTime(U32 year, U8 month, U8 day, U8 hour, U8 minute, U8 second) {
     year = (year > std::numeric_limits<int>::max()) ? std::numeric_limits<int>::max() : year;
     Fw::Time before_set = this->getTime();
     ::setTime(hour, minute, second, day, month, year);
@@ -49,7 +48,7 @@ void ArduinoTime ::setTime(U32 year, U8 month, U8 day, U8 hour, U8 minute, U8 se
                                   after_set.getSeconds(), after_set.getUSeconds(), after_set.getTimeBase());
 }
 
-void ArduinoTime ::setTime_handler(FwIndexType portNum, U32 year, U8 month, U8 day, U8 hour, U8 minute, U8 second) {
+void FeatherM4Time ::setTime_handler(FwIndexType portNum, U32 year, U8 month, U8 day, U8 hour, U8 minute, U8 second) {
     this->setTime(year, month, day, hour, minute, second);
 }
 
@@ -57,7 +56,7 @@ void ArduinoTime ::setTime_handler(FwIndexType portNum, U32 year, U8 month, U8 d
 // Handler implementations for commands
 // ----------------------------------------------------------------------
 
-void ArduinoTime ::SET_TIME_cmdHandler(FwOpcodeType opCode,
+void FeatherM4Time ::SET_TIME_cmdHandler(FwOpcodeType opCode,
                                        U32 cmdSeq,
                                        U32 year,
                                        U8 month,
@@ -68,4 +67,4 @@ void ArduinoTime ::SET_TIME_cmdHandler(FwOpcodeType opCode,
     this->setTime(year, month, day, hour, minute, second);
     this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::OK);
 }
-}  // namespace Arduino
+}  // namespace FeatherM4

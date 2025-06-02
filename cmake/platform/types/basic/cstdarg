@@ -1,3 +1,0 @@
-extern "C" {
-    #include <stdarg.h>
-} // extern "C"

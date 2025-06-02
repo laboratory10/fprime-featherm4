@@ -1,33 +1,9 @@
-
-
-
 ####
-# ends_with:
+# featherm4-warpper.cmake:
 #
-# Check if the string input ends with the given suffix. Sets OUTPUT_VAR to TRUE when it does and  sets OUTPUT_VAR to
-# FALSE when it does not. OUTPUT_VAR is the name of the variable in PARENT_SCOPE that will be set.
-#
-# Note: regexs in CMake are known to be inefficient. Thus `starts_with` and `ends_with` are implemented without them
-# in order to ensure speed.
-#
-# OUTPUT_VAR: variable to set
-# STRING: string to check
-# SUFFIX: expected ending
+# Support for the FeatherM4 board using the arduino-cli utility.
+# Based heavily on the fprime-arduino library
 ####
-function(ends_with OUTPUT_VAR STRING SUFFIX)
-    set("${OUTPUT_VAR}" FALSE PARENT_SCOPE)
-    string(LENGTH "${STRING}" INPUT_LENGTH)
-    string(LENGTH "${SUFFIX}" SUFFIX_LENGTH)
-    if (INPUT_LENGTH GREATER_EQUAL SUFFIX_LENGTH)
-        # Calculate the substring of suffix length at end of string
-        math(EXPR START "${INPUT_LENGTH} - ${SUFFIX_LENGTH}")
-        string(SUBSTRING "${STRING}" "${START}" "${SUFFIX_LENGTH}" FOUND_SUFFIX)
-        # Check the substring
-        if (FOUND_SUFFIX STREQUAL "${SUFFIX}")
-            set("${OUTPUT_VAR}" TRUE PARENT_SCOPE)
-        endif()
-    endif()
-endfunction(ends_with)
 
 ####
 # Function `run_arduino_wrapper`:

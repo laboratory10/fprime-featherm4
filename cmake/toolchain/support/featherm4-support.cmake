@@ -1,18 +1,12 @@
 ####
-# arduino-support.cmake:
+# featherm4-support.cmake:
 #
-# Support for arduino supported boards using the arduino-cli utility. Note: users must install boards, libraries, and
-# cores through the arduino-cli utility in order to use those parts of arduino with this toolchain. Additionally, this
-# toolchain provides for the following functions:
-#
-# - include_arduino_libraries: called to add arduino libraries into the toolchain. The user may use these libraries and
-#     the final executable will be linked against these libraries.
-# - finalize_arduino_executable: called on a deployment target to attach the arduino specific steps and libraries to it.
-#
-# @author lestarch
+# Support for the FeatherM4 board using the arduino-cli utility.
+# Based heavily on the fprime-arduino library.
 ####
+
 cmake_minimum_required(VERSION 3.19)
-include("${CMAKE_CURRENT_LIST_DIR}/arduino-wrapper.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/featherm4-wrapper.cmake")
 set(FPRIME_ARDUINO TRUE)
 set(ARDUINO_WRAPPER_JSON_OUTPUT "${CMAKE_BINARY_DIR}/arduino-cli-compiler-settings.json")
 set(EXTRA_LIBRARY_SOURCE "${CMAKE_CURRENT_LIST_DIR}/sources/extras.cpp")

@@ -1,17 +1,17 @@
 // ======================================================================
-// \title  StreamDriverImpl.hpp
-// \author lestarch
-// \brief  hpp file for StreamDriver component implementation class
+// \title StreamDriver.cpp
+// \brief Definitions for StreamDriver component. Heavily based on 
+//        the fprime-arduino library.
 // ======================================================================
 
-#ifndef StreamDriver_HPP
-#define StreamDriver_HPP
+#ifndef FEATHERM4_DRV_STREAMDRIVER_HPP
+#define FEATHERM4_DRV_STREAMDRIVER_HPP
 
 #include <fprime-featherm4-freertos/Drv/StreamDriver/StreamDriverComponentAc.hpp>
 #include "Os/Task.hpp"
-#include <FprimeArduino.hpp>
+#include <FprimeFeatherM4.hpp>
 
-namespace Arduino {
+namespace FeatherM4 {
 // Allow for setting serial ports on linux from the inputs
 #ifndef ARDUINO
 extern char** SERIAL_PORT;
@@ -63,6 +63,6 @@ class StreamDriver : public StreamDriverComponentBase {
     void* m_port_pointer;
 };
 
-}  // end namespace Arduino
+}  // namespace FeatherM4
 
-#endif
+#endif // FEATHERM4_DRV_STREAMDRIVER_HPP

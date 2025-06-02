@@ -1,4 +1,4 @@
-module Arduino {
+module FeatherM4 {
 
   passive component StreamDriver {
 

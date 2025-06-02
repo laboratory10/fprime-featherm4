@@ -1,8 +1,10 @@
-/**
- * \brief PlatformTypes.h: for teensy systems (supports 64bit)
- */
-#ifndef TEENSY_PLATFORM_TYPES_H_
-#define TEENSY_PLATFORM_TYPES_H_
+// ======================================================================
+// \title PlatformTypes.h
+// \brief Defines board-specific macros and types for the 
+//        featherm4. Heavily based on the fprime-arduino library.
+// ======================================================================
+#ifndef FEATHERM4_PLATFORM_TYPES_H_
+#define FEATHERM4_PLATFORM_TYPES_H_
 
 #include <cstdint>
 #include <cinttypes>
@@ -58,4 +60,4 @@ typedef PlatformIntType PlatformQueuePriorityType;
     #define PRI_PlatformPointerCastType PRIx8
   #endif
 #endif
-#endif //TEENSY_PLATFORM_TYPES_H_
+#endif //FEATHERM4_PLATFORM_TYPES_H_

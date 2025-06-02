@@ -1,10 +1,10 @@
 // ======================================================================
-// \title  FprimeArduino.hpp
-// \author lestarch
-// \brief  Compatibility header for use of Arduino.h in fprime-arduino
+// \title FprimeFeatherM4.hpp
+// \brief Compatability header to include Arduino.h in fprime-featherm4.
+//        Heavily based on fprime-arduino library.
 // ======================================================================
-#ifndef ARDUINOBLINK_FPRIMEARDUINO_HPP
-#define ARDUINOBLINK_FPRIMEARDUINO_HPP
+#ifndef FPRIMEFEATHERM4_HPP
+#define FPRIMEFEATHERM4_HPP
 #undef DEPRECATED // Undefine in preparation for arduino's definition
 #include <Arduino.h>
 #undef DEPRECATED // Undefine arduino's definitions
@@ -20,20 +20,20 @@
  *   LOW -> Arduino::DEF_LOW
  *
  */
-namespace Arduino {
-enum ARDUINO_DEFINITION_REMAP {
-    DEF_HIGH = HIGH,
-    DEF_LOW = LOW,
-    DEF_INPUT = INPUT,
-    DEF_OUTPUT = OUTPUT,
-    DEF_INPUT_PULLUP = INPUT_PULLUP,
-#ifdef LED_BUILTIN
-    DEF_LED_BUILTIN = LED_BUILTIN
-#else
-    DEF_LED_BUILTIN = -1
-#endif //LED_BUILTIN
-};
-};
+namespace FeatherM4 {
+    enum ARDUINO_DEFINITION_REMAP {
+        DEF_HIGH = HIGH,
+        DEF_LOW = LOW,
+        DEF_INPUT = INPUT,
+        DEF_OUTPUT = OUTPUT,
+        DEF_INPUT_PULLUP = INPUT_PULLUP,
+        #ifdef LED_BUILTIN
+            DEF_LED_BUILTIN = LED_BUILTIN
+        #else
+            DEF_LED_BUILTIN = -1
+        #endif //LED_BUILTIN
+    }; 
+}; // namespace FeatherM4
 #undef INPUT
 #undef OUTPUT
 #undef INPUT_PULLUP
@@ -44,4 +44,4 @@ enum ARDUINO_DEFINITION_REMAP {
 #undef DEFAULT
 #undef DISABLED
 
-#endif  // ARDUINOBLINK_FPRIMEARDUINO_HPP
+#endif  // FPRIMEFEATHERM4_HPP

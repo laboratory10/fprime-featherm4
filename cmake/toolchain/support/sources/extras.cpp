@@ -1,3 +1,8 @@
+// ======================================================================
+// \title extras.cpp
+// \brief Provides FeatherM4-specific low level logging and memory  
+//        allocation. Heavily based on the fprime-arduino library.
+// ======================================================================
 #include <Fw/Logger/Logger.hpp>
 
 #ifdef FPRIME_ARUDINO_SYNTHETIC_WRITE

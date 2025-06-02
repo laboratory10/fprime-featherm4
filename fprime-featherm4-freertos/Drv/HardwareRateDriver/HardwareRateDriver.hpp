@@ -1,9 +1,16 @@
-#ifndef ARDUINO_DRV_HARDWARERATEDRIVER_HPP
-#define ARDUINO_DRV_HARDWARERATEDRIVER_HPP
+// ======================================================================
+// \title HardwareRateDriver.cpp
+// \brief Definitions for a rate group driver designed to work as a 
+//        passive component with the FeatherM4 board. Heavily based on 
+//        the fprime-arduino library.
+// ======================================================================
+
+#ifndef FEATHERM4_DRV_HARDWARERATEDRIVER_HPP
+#define FEATHERM4_DRV_HARDWARERATEDRIVER_HPP
 #include <Os/RawTime.hpp>
 #include <fprime-featherm4-freertos/Drv/HardwareRateDriver/HardwareRateDriverComponentAc.hpp>
 
-namespace Arduino {
+namespace FeatherM4 {
     /**
      * HardwareRateDriver:
      *
@@ -53,5 +60,5 @@ namespace Arduino {
             //!< Static callback to the ISR triggered via a timer
             static void s_timerISR();
     };
-}
-#endif
+} // namespace FeatherM4
+#endif // FEATHERM4_DRV_HARDWARERATEDRIVER_HPP

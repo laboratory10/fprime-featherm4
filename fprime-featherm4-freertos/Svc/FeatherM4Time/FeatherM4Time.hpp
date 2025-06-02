@@ -1,14 +1,19 @@
-#ifndef ARDUINOTIMEIMPL_HPP_
-#define ARDUINOTIMEIMPL_HPP_
+// ======================================================================
+// \title RawTime.hpp
+// \brief FeatherM4 definitions for Os::RawTime. Heavily based on 
+//        the fprime-arduino library.
+// ======================================================================
+#ifndef FEATHERM4_SVC_FEATHERM4TIME_HPP
+#define FEATHERM4_SVC_FEATHERM4TIME_HPP
 
-#include <fprime-featherm4-freertos/Svc/ArduinoTime/ArduinoTimeComponentAc.hpp>
+#include <fprime-featherm4-freertos/Svc/FeatherM4Time/FeatherM4TimeComponentAc.hpp>
 
-namespace Arduino {
+namespace FeatherM4 {
 
-class ArduinoTime : public ArduinoTimeComponentBase {
+class FeatherM4Time : public FeatherM4TimeComponentBase {
   public:
-    ArduinoTime(const char* compName);
-    virtual ~ArduinoTime();
+    FeatherM4Time(const char* compName);
+    virtual ~FeatherM4Time();
 
     //! \brief set time for the arduino subsystem
     //!
@@ -57,6 +62,6 @@ class ArduinoTime : public ArduinoTimeComponentBase {
                         ) override;
 };
 
-}  // namespace Arduino
+}  // namespace FeatherM4
 
-#endif /* ARDUINOTIMEIMPL_HPP_ */
+#endif // FEATHERM4_SVC_FEATHERM4TIME_HPP

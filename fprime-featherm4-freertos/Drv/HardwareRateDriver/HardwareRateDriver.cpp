@@ -1,10 +1,19 @@
-#include <fprime-featherm4-freertos/Drv/HardwareRateDriver/HardwareRateDriver.hpp>
-#include <FpConfig.hpp>
-#ifdef ARDUINO
-#include <FprimeArduino.hpp>  // Needed for call to sei()
-#endif
+// ======================================================================
+// \title HardwareRateDriver.cpp
+// \brief Implementations for a rate group driver designed to work as a 
+//        passive component with the FeatherM4 board. Heavily based on 
+//        the fprime-arduino library.
+// ======================================================================
 
-namespace Arduino {
+#include <FpConfig.hpp>
+#include <fprime-featherm4-freertos/Drv/HardwareRateDriver/HardwareRateDriver.hpp>
+#include <Fw/Logger/Logger.hpp>
+#include <FprimeFeatherM4.hpp>
+
+namespace FeatherM4 {
+
+static U32 last_us;
+static U32 interval_us;
 
 HardwareRateDriver* HardwareRateDriver::s_driver = NULL;
 
@@ -32,4 +41,25 @@ void HardwareRateDriver::s_timer(void* comp) {
     }
     driver->m_last = now;
 }
-}  // namespace Arduino
+
+void HardwareRateDriver::start() {
+    interval_us = m_interval * 1000;
+    last_us = micros();
+}
+
+void HardwareRateDriver::cycle() {
+    if((micros() - last_us) >= interval_us)
+    {
+        this->s_timerISR();
+        last_us += interval_us;
+    }
+}
+
+void HardwareRateDriver::stop() {
+    
+}
+
+void HardwareRateDriver::s_timerISR() {    
+    s_timer(s_driver);
+}
+}  // namespace FeatherM4

@@ -1,12 +1,12 @@
-module Arduino {
+module FeatherM4 {
     @ A component for getting time
-    passive component ArduinoTime {
+    passive component FeatherM4Time {
 
         @ Port to retrieve time
         sync input port getTime: Fw.Time
 
         @ Port to set the time
-        sync input port setTime: Arduino.SetTime
+        sync input port setTime: FeatherM4.SetTime
 
         @ Command to set the time
         sync command SET_TIME(

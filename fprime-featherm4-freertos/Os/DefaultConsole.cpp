@@ -1,6 +1,6 @@
 // ======================================================================
-// \title Os/DefaultConsole.cpp
-// \brief sets default Os::Console to arduino implementation via linker
+// \title DefaultConsole.cpp
+// \brief sets default Os::Console to FeatherM4 implementation via linker
 // ======================================================================
 #include "Os/Console.hpp"
 #include "fprime-featherm4-freertos/Os/Console.hpp"
@@ -8,6 +8,6 @@
 
 namespace Os {
 ConsoleInterface* ConsoleInterface::getDelegate(ConsoleHandleStorage& aligned_new_memory, const ConsoleInterface* to_copy) {
-    return Os::Delegate::makeDelegate<ConsoleInterface, Os::Arduino::StreamConsole>(aligned_new_memory, to_copy);
+    return Os::Delegate::makeDelegate<ConsoleInterface, Os::FeatherM4::StreamConsole>(aligned_new_memory, to_copy);
 }
 }

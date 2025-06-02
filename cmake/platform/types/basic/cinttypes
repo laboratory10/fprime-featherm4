@@ -1,3 +1,0 @@
-extern "C" {
-    #include <inttypes.h>
-} // extern "C"

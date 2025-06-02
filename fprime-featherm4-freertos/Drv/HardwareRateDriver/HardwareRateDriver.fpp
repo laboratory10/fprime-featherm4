@@ -1,4 +1,4 @@
-module Arduino {
+module FeatherM4 {
 
   @ An interrupt based driver for Arduino rate groups.
   passive component HardwareRateDriver {
